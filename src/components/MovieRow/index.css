@@ -1,0 +1,65 @@
+.movieRow{
+    margin-bottom: 30px;
+    
+}
+
+.movieRow h2{
+    margin: 0px 0px 0px 30px;
+
+}
+
+.movieRow-listA{
+    overflow-x: hidden; /*tudo que passar da tela na horizontal(x) vai ser cortado*/
+    padding-left: 30px;
+}
+
+.movieRow-list{
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+.movieRow-item{
+    display: inline-block;
+    width: 150px;
+}
+.movieRow-item img{
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.2s; /*da uma transição de 0.2 segundos para o efeito de escala*/
+}
+.movieRow-item img:hover{  /*ao passar o mouse em cima da imagem a escala aumenta para 1*/
+    transform: scale(1);
+}
+
+.movieRow-left,
+.movieRow-right{
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+.movieRow-left{
+    left: 0;
+}
+.movieRow-right{
+    right: 0;
+}
+.movieRow:hover .movieRow-left,
+.movieRow:hover .movieRow-right{
+    opacity: 1;
+}
+
+@media (max-width:760px){
+    .movieRow-left,
+    .movieRow-right{
+        opacity: 1;
+    }
+}
