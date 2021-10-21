@@ -15,7 +15,6 @@ export default function App() {
     const loadAll = async ()=>{
       /*pegando lista de filmes */
       let list = await Tmdb.getHomeList()
-      console.log(list)
       setMList(list)
 
       //pegando featured
